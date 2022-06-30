@@ -17,7 +17,6 @@
   
     <!-- Card en amarillo -->
     <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance < 67 && objetivo.avance >= 33">
-  
       <div id="card{{i}}" class="texto-objetivo ambar-claro">
         <textarea class="textarea-o" rows="4" auto-grow="true" lines="none" [innerHTML]="objetivo.detalles"></textarea>
         <p>25/05/2022 a las 04:55 a.m.</p>
@@ -31,7 +30,6 @@
   
     <!-- Card en rojo -->
     <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance < 33 && objetivo.avance >= 1">
-  
       <div id="card{{i}}" class="texto-objetivo rojo-claro">
         <textarea class="textarea-o" rows="4" auto-grow="true" lines="none" [innerHTML]="objetivo.detalles"></textarea>
         <p>25/05/2022 a las 04:55 a.m.</p>
