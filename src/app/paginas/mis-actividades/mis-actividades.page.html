@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border">
+  
+  <!-- Header simple -->
+  <ion-toolbar *ngIf="!isAddOpen">
+     
+      <ion-title color="">Mis actividades</ion-title>
+
+      <ion-buttons slot="end">
+          <ion-button (click)="isAddOpen=true">
+              <ion-icon name="add-outline" color="blanco"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+     
+  </ion-toolbar>
+
+  <!-- Header con la opción de agregar activada -->
+  <ion-toolbar *ngIf="isAddOpen">
+     
+      <ion-title>Nueva Sesión</ion-title>
+
+      <ion-buttons slot="start">
+          <ion-button (click)="isAddOpen=false">
+              <ion-icon name="arrow-back-outline" color="blanco"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+     
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="isAddOpen">
+     
+      <div class="div-add ion-margin-bottom" color="primary">
+ 
+          <ion-item class="ion-no-border" lines="none">
+             
+              <ion-textarea rows="1" [(ngModel)]="data.titulo" placeholder="Nueva sesión" ngDefaultControl>
+     
+              </ion-textarea>
+     
+          </ion-item>
+     
+          <ion-item class="ion-no-border" lines="none">
+     
+              <ion-fab-button (click)="sesionesUpdateAction()" slot="start">
+                  <ion-icon name="add-outline" color="primary"></ion-icon>
+              </ion-fab-button>
+     
+          </ion-item>
+     
+      </div>
+     
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <img src="assets/sesiones.jpg" />
+
+    <app-sesiones></app-sesiones>
+  
+</ion-content>
+
+

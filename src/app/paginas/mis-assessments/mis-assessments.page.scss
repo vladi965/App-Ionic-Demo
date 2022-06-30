@@ -1,0 +1,110 @@
+ion-header {
+
+    ion-toolbar, ion-item, p {
+    	--background: #15873f;
+    	background: #15873f;
+    	padding: 0 10px;
+    	color:#FFFFFF;
+
+		ion-title{
+			color:#FFFFFF;
+			font-weight: 500;
+		}
+    }
+}
+
+ion-content {
+	
+	--background: #e8e8e8;
+
+    .slides {
+		margin-top: 20px;
+		margin-bottom: 10px;
+    	padding: 4px 10px 0px 10px;
+
+		h2{
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin-top: 0px;
+			margin-bottom: 8px;
+			color: #15873f;
+	
+			span{
+				font-size: 1.2rem;
+				font-weight: 500;
+				color:#15873f;
+			}
+		}
+
+		p{
+			font-size: 1.2rem;
+			font-weight: 500;
+			margin-bottom: 10px;
+			color:#2a2a2a;
+		}
+
+		ion-card {
+			width: 100%;
+			box-shadow: none;
+			border-radius: 8px 0px 0px 0px;
+			padding: 0px;
+			background: rgba(255,255,255,.8);
+			margin: 5px 15px 5px 0px;
+	
+	
+			.imgCard{
+	
+				.resuelto {
+					opacity: 0.4;
+				}
+			}
+			.estado{
+				position: absolute;    /* posición absolute con respecto al padre */
+				top: 0;             /* posicionada en la esquina inferior derecha */
+				right: 0;
+				padding: 4px;
+				background-color: #FFFFFF;
+				font-size: 1rem;
+				border-radius: 0px;
+				color: #2a2a2a;
+			}
+	
+			ion-card-header{
+				
+				padding: 7px 0px;
+				text-align: left;
+	
+				ion-card-title{
+					font-size: 12px;
+					font-weight: 500;
+					color: #2a2a2a;
+					padding-left: 7px;
+					padding-right: 7px;
+				}
+	
+				ion-card-subtitle{
+					font-size: 13px ;
+					letter-spacing: normal;
+					text-transform: none;
+				}
+			}
+			  
+			ion-card-content{
+
+				padding: 0 0px 10px 10px;
+				text-align: left;
+
+				a{
+					font-size: 1.2rem;
+					color: #2a2a2a;
+				}
+
+				ion-button{
+					color: #ffffff;
+				}
+			}
+	  
+		}
+    }
+  
+}

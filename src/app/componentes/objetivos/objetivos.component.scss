@@ -1,0 +1,107 @@
+ion-list{
+
+    margin-top: 15px;
+    --background-color: #ffffff;
+    background-color: #ffffff;
+
+    ion-item-sliding{
+        padding: 0px;
+        margin-bottom: 20px;
+        --background-color: #ffffff;
+        background-color: #ffffff;
+
+        ion-item{
+            --background-color: #ffffff;
+            background-color: #ffffff;
+        
+            .texto-objetivo{
+                width: 60%;
+                border-radius: 10px;
+                padding: 10px 10px;
+                height: 135px;
+                color:#000000;
+            
+                p{
+                color: #000000;
+                font-size: 0.8rem;
+                text-align: right;
+                font-weight: 500;
+                margin-bottom: 0px;
+                }
+            
+                textarea{
+                    padding: 0px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: 0px solid transparent;
+                    padding: 0px;
+                    border-radius: 10px;
+                    margin: 0%;
+                    color:#000000;
+                }
+            
+                .textarea-o:focus, .textarea-o:active{
+                    outline: none;
+                }
+            }
+        }
+        
+    }
+
+    ion-item-options {
+
+        --background-color: #ffffff;
+        background-color: #ffffff;
+    
+        .iconBorrar{
+            font-size: 2rem;
+            color:#444444;
+            background-color: #ffffff;
+        }
+        bottom{
+            background-color: #ffffff;
+        }
+    }
+     
+}
+
+ 
+
+
+ 
+.avance{
+    width: 40%;
+    height: 135px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+    padding: 15px 10px;
+ 
+    background-color: #f9f9f9;
+ 
+
+ 
+    .dial{
+        pointer-events: nones; 
+    }
+}
+.verde-claro{
+    background: #0e892a40;
+    --background: #0e892a40;
+}
+ 
+.ambar-claro{
+    background: #db910f40;
+    --background: #db910f40;
+}
+ 
+.rojo-claro{
+    background: #ef535040;
+    --background: #ef535040;
+}
+ 
+.gris-claro{
+    background: #efefef;
+    --background: #efefef;
+}
+ 

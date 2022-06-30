@@ -1,0 +1,114 @@
+.conversacion{
+    --background: #ffffff;
+    background: #ffffff;
+    height: 90vh;
+    margin-top: 5px;
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+
+    .chat-section{
+        height: calc(100% - 90px);
+        overflow: scroll;
+
+        .chat{
+            display: flex;
+            flex-direction: column;
+
+            .mensajes{
+                
+                display: flex;
+                flex-direction: column;
+
+                .mensaje{
+                    border-radius: 8px;
+                    padding: 8px 12px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    font-size: 1rem;
+                }
+            }
+
+            .tus{
+                
+                align-items: flex-start;
+                
+                .mensaje{
+
+                    .autor{
+                        font-size: 0.8rem;
+                        color: #000000;
+                        text-align: left;
+                        font-weight: 500;
+                    }
+
+                    .fecha{
+                        font-size: 0.7rem;
+                        text-align: left;
+                    }
+
+                    p{
+                        margin: 8px 0px;
+                    }
+
+                    background: #eee;
+                    position: relative;
+                }
+            }
+
+            .mis{
+                align-items: flex-end;
+
+                .mensaje{
+                    color:#000000;
+                    margin-left: 25%;
+                    background: #b0e7c4;
+                    background-attachment: fixed;
+                    position: relative;
+
+                    p{
+                        margin: 8px 0px;
+                    }
+
+                    .fecha{
+                        font-size: 0.7rem;
+                        text-align: right;
+                        color:#000000;
+                        float: right;
+                    }
+                }
+            }
+
+        } 
+    }
+
+    .mensaje-input{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 20px;
+        width: 90vw;
+        left:50%;
+        margin-left: -45vw;
+
+        ion-input{
+            border: 1px solid #ddd;
+            background: rgb(234, 234, 234);
+            border-radius: 20px;
+            height: 48px;
+            color:#000000;
+            --padding-start: 20px;
+        }
+
+        .boton-de-envio{
+            margin-left:20px;
+            background:#15873f;
+            padding: 12px 12px 9px 15px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.4rem;
+
+        }
+
+    }
+}

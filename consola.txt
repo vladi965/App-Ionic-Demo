@@ -1,0 +1,18 @@
+ionic build
+
+npx cap add android 
+
+npm run resources
+
+npx cap open android
+
+// Para IOS
+ionic build
+
+npx cap add ios
+
+npm run resources
+
+npx cap open ios
+
+npx cap run ios

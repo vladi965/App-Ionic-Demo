@@ -1,0 +1,155 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+        <ion-title color="">Mis assessments</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div class="slides">
+
+        <h2>Mis Assessments <span>(Autoevalúate)</span></h2>
+        <p class="my-1"><ion-icon name="rocket"></ion-icon> {{cantResAss}} Resueltas, <ion-icon name="alarm"></ion-icon> {{cantSinResAss}} Pendientes.</p>
+
+        <ion-slides [options]="slidesOptions">
+
+            <ion-slide *ngFor="let assesment of assessments">
+                
+                <ion-card>
+                    
+                    <div class="imgCard">
+                        <img *ngIf="assesment.estatus == '0'" src="https://peraconsultores.repiensa.pe/evaluaciones/{{assesment.carpeta}}/images/acordion.jpg" />
+                        <img *ngIf="assesment.estatus == '2'" class="resuelto" src="https://peraconsultores.repiensa.pe/evaluaciones/{{assesment.carpeta}}/images/acordion.jpg" />
+
+                        <ion-text class="estado fw-600" color="primary" *ngIf="assesment.estatus == '0'">Pendiente</ion-text>
+                        <ion-text class="estado fw-600" color="dark" *ngIf="assesment.estatus == '2'">Resuelta</ion-text>
+                    </div>
+
+                    <ion-card-header>
+                        <ion-card-title>{{assesment.nombre}}</ion-card-title>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        <ion-button class="boton" *ngIf="assesment.estatus == '0'" share="round" color="primary">Resolver</ion-button>
+                        <ion-button class="boton" *ngIf="assesment.estatus == '2'" share="round" color="dark">Ver reporte</ion-button>
+                    </ion-card-content>
+
+                </ion-card>
+
+            </ion-slide>
+        </ion-slides>
+    
+    </div>
+
+    <div class="slides">
+
+        <h2>Mis Jefes <span>(Evalúo a mis jefes)</span></h2>
+        <p class="my-1"><ion-icon name="rocket"></ion-icon> {{cantResAssJefes}} Resueltas, <ion-icon name="alarm"></ion-icon> {{cantSinResAssJefes}} Pendientes.</p>
+
+        <ion-slides [options]="slidesOptions">
+
+            <ion-slide *ngFor="let assesment of assessmentsJefes" >
+                
+                <ion-card>
+                    
+                    <div class="imgCard">
+                        <img *ngIf="assesment.estatus == '0'" src="https://peraconsultores.repiensa.pe/evaluaciones/{{assesment.carpeta}}/images/acordion.jpg" />
+                        <img *ngIf="assesment.estatus == '2'" class="resuelto" src="https://peraconsultores.repiensa.pe/evaluaciones/{{assesment.carpeta}}/images/acordion.jpg" />
+
+                        <ion-text class="estado fw-600" color="primary" *ngIf="assesment.estatus == '0'">Pendiente</ion-text>
+                        <ion-text class="estado fw-600" color="dark" *ngIf="assesment.estatus == '2'">Resuelta</ion-text>
+                    </div>
+
+                    <ion-card-header>
+                        <ion-card-title>{{assesment.nombre}}</ion-card-title>
+                        <ion-card-title>Evalúa a {{ assesment.nombreEjecutivo2}}</ion-card-title>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        <ion-button class="boton" *ngIf="assesment.estatus == '0'" share="round" color="primary">Resolver</ion-button>
+                        <ion-button class="boton" *ngIf="assesment.estatus == '2'" share="round" color="dark">Ver reporte</ion-button>                    </ion-card-content>
+                    
+                </ion-card>
+
+            </ion-slide>
+    
+        </ion-slides>
+    
+    </div>
+
+    <div class="slides">
+
+        <h2>Mis Colaboradores <span>(Evalúo a mis colaboradores)</span></h2>
+        <p class="my-1"><ion-icon name="rocket"></ion-icon> {{cantResAssColaboradores}} Resueltas, <ion-icon name="alarm"></ion-icon> {{cantSinResAssColaboradores}} Pendientes.</p>
+
+        <ion-slides [options]="slidesOptions">
+
+            <ion-slide *ngFor="let assesment of assessmentsColaboradores" >
+                
+                <ion-card>
+                    
+                    <div class="imgCard">
+                        <img *ngIf="assesment.estatus == '0'" src="https://peraconsultores.repiensa.pe/evaluaciones/{{assesment.carpeta}}/images/acordion.jpg" />
+                        <img *ngIf="assesment.estatus == '2'" class="resuelto" src="https://peraconsultores.repiensa.pe/evaluaciones/{{assesment.carpeta}}/images/acordion.jpg" />
+
+                        <ion-text class="estado fw-600" color="primary" *ngIf="assesment.estatus == '0'">Pendiente</ion-text>
+                        <ion-text class="estado fw-600" color="dark" *ngIf="assesment.estatus == '2'">Resuelta</ion-text>
+                    </div>
+
+                    <ion-card-header>
+                        <ion-card-title>{{assesment.nombre}}</ion-card-title>
+                        <ion-card-title>Evalúa a {{ assesment.nombreEjecutivo2}}</ion-card-title>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        <ion-button class="boton" *ngIf="assesment.estatus == '0'" share="round" color="primary">Resolver</ion-button>
+                        <ion-button class="boton" *ngIf="assesment.estatus == '2'" share="round" color="dark">Ver reporte</ion-button>
+                    </ion-card-content>
+                    
+                </ion-card>
+
+            </ion-slide>
+    
+        </ion-slides>
+    
+    </div>
+
+
+    <div class="slides">
+
+        <h2>Mis Pares <span>(Evalúo a mis pares)</span></h2>
+        <p class="my-1"><ion-icon name="rocket"></ion-icon> {{cantResAssPares}} Resueltas, <ion-icon name="alarm"></ion-icon> {{cantSinResAssPares}} Pendientes.</p>
+
+        <ion-slides [options]="slidesOptions">
+
+            <ion-slide *ngFor="let assesment of assessmentsPares" >
+                
+                <ion-card>
+                    
+                    <div class="imgCard">
+                        <img *ngIf="assesment.estatus == '0'" src="https://peraconsultores.repiensa.pe/evaluaciones/{{assesment.carpeta}}/images/acordion.jpg" />
+                        <img *ngIf="assesment.estatus == '2'" class="resuelto" src="https://peraconsultores.repiensa.pe/evaluaciones/{{assesment.carpeta}}/images/acordion.jpg" />
+
+                        <ion-text class="estado fw-600" color="primary" *ngIf="assesment.estatus == '0'">Pendiente</ion-text>
+                        <ion-text class="estado fw-600" color="dark" *ngIf="assesment.estatus == '2'">Resuelta</ion-text>
+                    </div>
+
+                    <ion-card-header>
+                        <ion-card-title>{{assesment.nombre}}</ion-card-title>
+                        <ion-card-title>Evalúa a {{ assesment.nombreEjecutivo2}}</ion-card-title>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        <ion-button class="boton" *ngIf="assesment.estatus == '0'" share="round" color="primary">Resolver</ion-button>
+                        <ion-button class="boton" *ngIf="assesment.estatus == '2'" share="round" color="dark">Ver reporte</ion-button>
+                    </ion-card-content>
+                    
+                </ion-card>
+
+            </ion-slide>
+    
+        </ion-slides>
+    
+    </div>
+
+  </ion-content>

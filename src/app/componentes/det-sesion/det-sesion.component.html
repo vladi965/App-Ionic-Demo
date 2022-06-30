@@ -1,0 +1,42 @@
+<div class="conversacion ion-padding">
+
+	<div class="chat-section" id="chat">
+
+		<div class="chat">
+			
+			<div *ngFor="let mensaje of mensajesData; let i = index">
+
+				<div class="mis mensajes" *ngIf="mensaje.tipo == '1'">
+					
+					<div class="mensaje">
+						<p>{{mensaje.texto}}</p>
+						<span class="fecha">22/04/2020 a las 3:24 p.m.</span>
+					</div>
+				</div>
+
+				<div class="tus mensajes" *ngIf="mensaje.tipo == '2'">
+					
+					<div class="mensaje otros">
+						<span class="autor">Isabel Luna</span>
+						<p>{{mensaje.texto}}</p>
+						<span class="fecha">22/04/2020 a las3:24 p.m.</span>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+	<!-- Envio de nuevo mensaje -->
+	<div class="mensaje-input">
+
+		<ion-textarea class="content-textarea" placeholder="Escribe tu mensaje..." [(ngModel)]="data.texto" ngDefaultControl></ion-textarea>
+		<div class="boton-de-envio">
+			<ion-icon name="send" (click)="mensajesUpdateAction()"></ion-icon>
+		</div>
+
+	</div>
+
+</div>

@@ -1,0 +1,19 @@
+
+ion-list{
+    margin-top: 0px;
+    --background-color: #ffffff;
+    background-color: #ffffff;
+
+    ion-item{
+        --background-color: #ffffff;
+        background-color: #ffffff;
+
+        ion-label{
+
+            h1, h2, h3{
+                color: #2a2a2a;
+                font-weight: 500;
+            }
+        }
+    }
+}

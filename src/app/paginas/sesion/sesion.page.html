@@ -1,0 +1,24 @@
+<ion-content>
+
+	<div class="header ion-padding">
+
+		<div class="info">
+
+			<ion-icon class="left" name="arrow-back" routerLink="/home/actividades"></ion-icon>
+
+			<span class="details">
+				<h1>{{tituloSesion}}</h1>
+				<p>11/04/2022</p>
+			</span>
+
+			<ion-icon class="right" name="trash-outline" (click)="eliminarSesion()"></ion-icon>
+
+			<ion-icon class="right" name="create-outline" (click)="EditarSesion()"></ion-icon>
+
+		</div>
+
+	</div>
+
+	<app-det-sesion></app-det-sesion>
+
+</ion-content>
