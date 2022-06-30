@@ -2,9 +2,7 @@
   
   <!-- Header simple -->
   <ion-toolbar *ngIf="!isAddOpen">
-     
       <ion-title color="blanco">Mis objetivos</ion-title>
-
       <ion-buttons slot="end">
           <ion-button (click)="isAddOpen=true">
               <ion-icon name="add-outline" color="blanco"></ion-icon>
@@ -15,31 +13,24 @@
 
   <!-- Header con la opción de agregar activada -->
   <ion-toolbar *ngIf="isAddOpen">
-     
       <ion-title color="blanco">Nuevo objetivo</ion-title>
-
       <ion-buttons slot="start">
           <ion-button (click)="isAddOpen=false">
               <ion-icon name="arrow-back-outline" color="blanco"></ion-icon>
           </ion-button>
       </ion-buttons>
-     
   </ion-toolbar>
 
+
+
   <ion-toolbar *ngIf="isAddOpen">
-     
       <div class="div-add ion-margin-bottom" color="primary">
- 
           <ion-item class="ion-no-border" lines="none">
-             
               <ion-textarea [(ngModel)]="data.detalle" placeholder="Nuevo objetivo" ngDefaultControl>
-     
               </ion-textarea>
-     
           </ion-item>
      
           <ion-item class="ion-no-border" lines="none">
-     
               <ion-fab-button (click)="objetivosUpdateAction()" slot="start">
                   <ion-icon size="large" name="add-outline" color="primary"></ion-icon>
               </ion-fab-button>
