@@ -4,7 +4,6 @@
      
     <!-- Card en verde -->
     <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance >= 67">
-  
       <div id="card{{i}}" class="texto-objetivo verde-claro">
         <textarea class="textarea-o" rows="4" auto-grow="true" lines="none" [innerHTML]="objetivo.detalles"></textarea>
         <p>25/05/2022 a las 04:55 a.m.</p>
@@ -13,10 +12,10 @@
       <div class="avance">
         <input id="avance{{i}}" type="text" [attr.data-index]="i" [attr.data-id-objetivo]="objetivo.id" value="{{objetivo.avance}}" class="dial" data-width="110" data-height="70" data-thickness="0.6" data-fgColor="#0e892a">
       </div>
-       
+
     </ion-item>
   
-    <!-- Card en ambar -->
+    <!-- Card en amarillo -->
     <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance < 67 && objetivo.avance >= 33">
   
       <div id="card{{i}}" class="texto-objetivo ambar-claro">
@@ -44,13 +43,13 @@
        
     </ion-item>
   
+   <!--  function de Eliminar Objeto -->
     <ion-item-options side="start">
       <ion-item-option color="primary" (click)="eliminarObjetivo(objetivo.id, i)"><ion-icon name="trash"></ion-icon></ion-item-option>
     </ion-item-options>
   
     <!-- Card sin empezar -->
     <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance == 0">
-  
       <div id="card{{i}}"  class="texto-objetivo gris-claro">
         <textarea class="textarea-o" rows="4" auto-grow="true" lines="none" [innerHTML]="objetivo.detalles"></textarea>
         <p>25/05/2022 a las 04:55 a.m.</p>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastService } from 'src/app/servicios/toast.service';
 import { AuthService } from './../../servicios/auth.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class LoginPage implements OnInit {
 	constructor(
 		private router: Router,
 		private authService: AuthService,
+		private toastService: ToastService
 	) {}
 
 
@@ -43,16 +45,16 @@ export class LoginPage implements OnInit {
 						localStorage.setItem("token",res.token);
 						this.router.navigate(['home/assessments']);
 					} else {
-						console.log('incorrect password.');
+						this.toastService.presentToast('Incorrect usuario or password');
 					}
 				},
 				(error: any) => {
-					console.log('Network Issue.');
+					this.toastService.presentToast('Contraseña Incorrecta')
 				}
 			);
 			
 		} else {
-			console.log('Please enter email/username or password.');
+			this.toastService.presentToast('Porfavor ingrese su Correo Electrónico o contraseña');
 		}
 	}
 

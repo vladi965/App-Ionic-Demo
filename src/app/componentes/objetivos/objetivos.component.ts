@@ -13,6 +13,8 @@ import { HttpService } from 'src/app/servicios/http.service.js';
 	templateUrl: './objetivos.component.html',
 	styleUrls: ['./objetivos.component.scss'],
 })
+
+
 export class ObjetivosComponent implements OnInit {
 
 	objetivosData: any;
