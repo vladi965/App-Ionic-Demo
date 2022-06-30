@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 //import { AlertService } from 'src/app/servicios/alert.service';
 import { ObjetivosService } from 'src/app/servicios/objetivos.service';
 
@@ -10,8 +9,8 @@ import { ObjetivosService } from 'src/app/servicios/objetivos.service';
   	templateUrl: './mis-objetivos.page.html',
   	styleUrls: ['./mis-objetivos.page.scss'],
 })
-export class MisObjetivosPage implements OnInit {
 
+export class MisObjetivosPage implements OnInit {
 	token: any ;
 	public isAddOpen = false;
 	public data = {
@@ -50,7 +49,7 @@ export class MisObjetivosPage implements OnInit {
 
 
 	objetivosUpdateAction(){
- 
+		
 		this.objetivosService.agregarObjetivo(this.data).subscribe((res: any) => {
 			this.objetivosService.actualizarObjetivosData(res);
 			this.isAddOpen = false;

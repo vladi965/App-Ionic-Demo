@@ -78,7 +78,7 @@ export class ObjetivosComponent implements OnInit {
 				// Enviar la data al servidor
 				var postAvance = {id: input.data("id-objetivo"), avance: valor}
 				auxObjetivosService.actualizarAvanceObjetivo(postAvance).subscribe((res: any) => {
-
+					
 				});
 			},
 
