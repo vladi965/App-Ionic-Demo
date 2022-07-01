@@ -1,46 +1,52 @@
-<ion-list lines="none">
-  
+<ion-list lines="none">  
   <ion-item-sliding *ngFor="let objetivo of objetivosData; let i = index" lines="none">
-     
-    <!-- Card en verde -->
-    <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance >= 67">
-      <div id="card{{i}}" class="texto-objetivo verde-claro">
-        <textarea class="textarea-o" rows="4" auto-grow="true" lines="none" [innerHTML]="objetivo.detalles"></textarea>
-        <p>25/05/2022 a las 04:55 a.m.</p>
-      </div>
-  
-      <div class="avance">
-        <input id="avance{{i}}" type="text" [attr.data-index]="i" [attr.data-id-objetivo]="objetivo.id" value="{{objetivo.avance}}" class="dial" data-width="110" data-height="70" data-thickness="0.6" data-fgColor="#0e892a">
-      </div>
-
-    </ion-item>
-  
-    <!-- Card en amarillo -->
-    <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance < 67 && objetivo.avance >= 33">
-      <div id="card{{i}}" class="texto-objetivo ambar-claro">
-        <textarea class="textarea-o" rows="4" auto-grow="true" lines="none" [innerHTML]="objetivo.detalles"></textarea>
-        <p>25/05/2022 a las 04:55 a.m.</p>
-      </div>
-  
-      <div class="avance">
-        <input id="avance{{i}}" data-card="card" type="text" [attr.data-index]="i" [attr.data-id-objetivo]="objetivo.id" value="{{objetivo.avance}}" class="dial" data-width="110" data-height="70" data-thickness="0.6" data-fgColor="#db910f">
-      </div>
-       
-    </ion-item>
-  
+    
+    
     <!-- Card en rojo -->
     <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance < 33 && objetivo.avance >= 1">
       <div id="card{{i}}" class="texto-objetivo rojo-claro">
         <textarea class="textarea-o" rows="4" auto-grow="true" lines="none" [innerHTML]="objetivo.detalles"></textarea>
         <p>25/05/2022 a las 04:55 a.m.</p>
       </div>
-  
+
+       <!-- Circle Progress -->
       <div class="avance">
         <input id="avance{{i}}" data-card="card" [attr.data-index]="i" [attr.data-id-objetivo]="objetivo.id" type="text" value="{{objetivo.avance}}" class="dial" data-width="110" data-height="70" data-thickness="0.6" data-fgColor="#ef5350">
       </div>
        
     </ion-item>
+    
   
+    <!-- Card en amarillo -->
+    <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance < 66 && objetivo.avance >= 33">
+      <div id="card{{i}}" class="texto-objetivo ambar-claro">
+        <textarea class="textarea-o" rows="4" auto-grow="true" lines="none" [innerHTML]="objetivo.detalles"></textarea>
+        <p>25/05/2022 a las 04:55 a.m.</p>
+      </div>
+
+      <!-- Circle Progress -->
+      <div class="avance">
+        <input id="avance{{i}}" data-card="card" type="text" [attr.data-index]="i" [attr.data-id-objetivo]="objetivo.id" value="{{objetivo.avance}}" class="dial" data-width="110" data-height="70" data-thickness="0.6" data-fgColor="#db910f">
+      </div>
+       
+    </ion-item>
+  
+
+    <!-- Card en verde -->
+    <ion-item class="ion-no-border" lines="none" *ngIf="objetivo.avance >= 66">
+      <div id="card{{i}}" class="texto-objetivo verde-claro">
+        <textarea class="textarea-o" rows="4" auto-grow="true" lines="none" [innerHTML]="objetivo.detalles"></textarea>
+        <p>25/05/2022 a las 04:55 a.m.</p>
+      </div>
+  
+      <!-- Circle Progress -->
+      <div class="avance">
+        <input id="avance{{i}}" type="text" [attr.data-index]="i" [attr.data-id-objetivo]="objetivo.id" value="{{objetivo.avance}}" class="dial" data-width="110" data-height="70" data-thickness="0.6" data-fgColor="#0e892a">
+      </div>
+
+    </ion-item>
+  
+    
    <!--  function de Eliminar Objeto -->
     <ion-item-options side="start">
       <ion-item-option color="primary" (click)="eliminarObjetivo(objetivo.id, i)"><ion-icon name="trash"></ion-icon></ion-item-option>

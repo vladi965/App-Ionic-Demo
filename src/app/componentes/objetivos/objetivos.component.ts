@@ -37,10 +37,11 @@ export class ObjetivosComponent implements OnInit {
 			'max':100,
 			'angleArc':180,
 			'angleOffset':-90,
-			'release': function(valor) {
+			'release': function(valor: number) {
 
 				var input = this.$.closest("input");
 
+				
 				if (33 > valor && valor >= 0){ // Rojo
 					
 					var color = "#ef5350";
@@ -75,20 +76,23 @@ export class ObjetivosComponent implements OnInit {
 				this.o.fgColor = color;
 				input.css("color", color);
 
+
 				// Enviar la data al servidor
 				var postAvance = {id: input.data("id-objetivo"), avance: valor}
 				auxObjetivosService.actualizarAvanceObjetivo(postAvance).subscribe((res: any) => {
-					
+						
 				});
 			},
 
 		}).children().off('mousewheel DOMMouseScroll');
 	}
 
+	//Eliminar el Objeto
 	eliminarObjetivo(idObjetivo: any, indexObjetivo: any){
 
 		var postData = {id: idObjetivo}
 
+		//Mensaje de Alerta de Borrado
 		this.alert.presentAlertConfirm('Borrar objetivo', '¿Estás seguro de eliminar el objetivo?').then((res: any) => {
 
 			// Eliminar el Objetivo

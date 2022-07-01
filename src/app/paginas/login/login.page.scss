@@ -36,7 +36,7 @@ ion-content{
 
     ion-item {
         height: 50px;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         border: #b1b4b7 2px solid;
         border-radius: 8px;
         --background: #ffffff;
@@ -53,5 +53,13 @@ ion-content{
     ion-button{
         padding-top: 10px;
         font-weight: 400;
+    }
+    .ion-title{
+        color: #000000;
+    }
+
+    .ion-icon-eye{
+        color: #15873f;
+
     }
 }

@@ -260,3 +260,14 @@
   --ion-color-shade: var(--ion-color-blanco-shade);
   --ion-color-tint: var(--ion-color-blanco-tint);
 }
+
+.my-custom-class {
+  max-width: 380px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toast-wrapper{
+  margin-bottom: 30px;
+}

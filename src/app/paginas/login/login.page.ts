@@ -8,7 +8,13 @@ import { AuthService } from './../../servicios/auth.service';
 	templateUrl: './login.page.html',
 	styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage implements OnInit {
+
+	// Ver el Password 
+	showPassword = false;
+	passwordToggleIcon = 'eye';
+
 
 	postData = {
 		username: '',
@@ -18,18 +24,28 @@ export class LoginPage implements OnInit {
 	constructor(
 		private router: Router,
 		private authService: AuthService,
-		private toastService: ToastService
+		private toastService: ToastService,
+
 	) {}
 
+
+	//Funcion de Eye Password 
+	togglePassword(): void {
+		this.showPassword = !this.showPassword;
+
+		if(this.passwordToggleIcon == 'eye'){
+			this.passwordToggleIcon = 'eye-off';
+		} else {
+			this.passwordToggleIcon = 'eye';
+		}
+	}	
 
 	ngOnInit() {
 	}
 
   	validateInputs() {
-	
 		let username = this.postData.username.trim();
 		let password = this.postData.password.trim();
-
 		return (this.postData.username && this.postData.password && username.length > 0 && password.length > 0);
 	}
 
@@ -54,7 +70,7 @@ export class LoginPage implements OnInit {
 			);
 			
 		} else {
-			this.toastService.presentToast('Porfavor ingrese su Correo Electrónico o contraseña');
+			this.toastService.presentToast('Porfavor ingrese su Email y/o password');
 		}
 	}
 

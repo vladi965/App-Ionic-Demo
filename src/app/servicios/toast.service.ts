@@ -12,9 +12,10 @@ export class ToastService {
   async presentToast(infoMessage: string) {
     const toast = await this.toastController.create({
       message: infoMessage,
-      duration: 2000,
+      duration: 3000,
       cssClass: 'my-custom-class',
-      color: 'primary'
+      color: 'primary',
+      position: 'bottom',
     });
     toast.present();
   }
